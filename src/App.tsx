@@ -2,20 +2,23 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./App.css";
 import React from "react";
+import HomePage from "./pages/home-page";
+import NewRecordPage from "./pages/new-record-page";
+import ViewRecordPage from "./pages/view-record-page";
 
 const App: React.FC = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <div>Hello world!</div>,
+      element: <HomePage />,
     },
     {
       path: "/new",
-      element: <div>New!</div>,
+      element: <NewRecordPage />,
     },
     {
       path: "/data/:id",
-      element: <div>ID</div>,
+      element: <ViewRecordPage />,
     },
   ]);
 
