@@ -1,15 +1,25 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import "./App.css";
+import React from "react";
 
-// TODO: Add Router Here`
+const App: React.FC = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <div>Hello world!</div>,
+    },
+    {
+      path: "/new",
+      element: <div>New!</div>,
+    },
+    {
+      path: "/data/:id",
+      element: <div>ID</div>,
+    },
+  ]);
 
-function App() {
-  return (
-    <>
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    </>
-  );
-}
+  return <RouterProvider router={router}></RouterProvider>;
+};
 
 export default App;
